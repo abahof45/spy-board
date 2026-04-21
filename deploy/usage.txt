@@ -1,0 +1,14 @@
+# 1. Interactive menu (recommended)
+python3 deploy.py
+
+# 2. Quick C2 server
+python3 deploy.py c2
+
+# 3. Deploy target ONLY (compiles + runs service)
+python3 deploy.py target
+
+# 4. Full auto-deploy (target + C2)
+python3 deploy.py full
+
+# 5. Generate portable package
+python3 deploy.py  # Choose 6
